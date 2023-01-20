@@ -44,6 +44,8 @@ class BookingRepository extends BaseRepository
     function __construct(Job $model, MailerInterface $mailer)
     {
         parent::__construct($model);
+        // like this use $this->model = $model; instead of Job::method 
+        
         $this->mailer = $mailer;
         $this->logger = new Logger('admin_logger');
 
